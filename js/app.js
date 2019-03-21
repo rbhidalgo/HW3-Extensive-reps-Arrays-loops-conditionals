@@ -101,3 +101,20 @@ console.log("Jim is all over the place " + jimHaff[2] + ", " + jimHaff[3] + ", "
 
 jimHaff.splice(2,1);
 console.log("Jim is only allowed to be in one of two cities " + jimHaff[2] + " or " + jimHaff[3])
+
+// Create an array with the members of the ninja turtles 
+// (Donatello, Leonardo, Raphael, Michaelangelo)
+
+const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
+
+// Use a for loop to call .toUpperCase() on each of them 
+// and print out the result.
+
+for (let i = 0; i < ninjaTurtles.length; i++) {
+        ninjaTurtles[i] = ninjaTurtles[i].toUpperCase();
+}
+console.log(ninjaTurtles);
+
+// Bonus: Modify the answer you just wrote. Instead of all letters 
+// being uppercase, make the letters alternate back and forth between 
+// uppercase and lowercase.
