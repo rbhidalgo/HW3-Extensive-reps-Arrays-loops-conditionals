@@ -49,3 +49,55 @@ for (let i = 1; i <= 100; i++) {
     console.log(i);
     }
 }
+
+// Use the following arrays to answer the questions below (name, age, hometown):
+
+const kenny = ["Kenny", 1000, "Austin"];
+const jimHaff = ["Jim H", 16, "All cities"];
+const reuben = ["Reuben", 22, "Durham"];
+const jimClark = ["Jim C", 186, "LA"];
+const ryan = ["Ryan", 65, "Denver"];
+
+// Jim Clark decides that Kenny can't be named "Kenny" anymore. 
+// Remove "Kenny" from the kenny array and replace it with "Gameboy".
+
+kenny[0] = "Gameboy"; {
+    console.log("Jim Clark changed Kenny's name to " + kenny[0]);
+}
+
+
+// Jim Clark just had his birthday; change jimClark's array to reflect him being a year older. 
+//Don't just hard code 187--pretend that you didn't already know that his age is 186, 
+//and write your code to just make him a year older than whatever age he was.
+
+// add +1 to the number [1] inside the object jimClark
+
+jimClark[1] += 1; {
+    console.log("Jim Clark just turned " + jimClark[1])
+}
+
+// Ryan is Batman maybe. Or possibly Robin. Change Ryan's hometown from "Denver" to "Gotham City".
+
+ryan[2] = "Gotham City"; {
+    console.log("Ryan might be Batman or Robin, he's from " + ryan[2]);
+}
+
+// Reuben left Durham 5 years ago to come to Chicago. First, remove "Durham" from Reuben's array, and then add "Chicago". 
+//(Note: remove and then add is different from simply changing the value at that index.)
+
+reuben.pop();
+reuben.push("Chicago");
+console.log("Reuben now lives in " + reuben[2])
+
+// Jim Haff could be literally anywhere in the world. Remove "All cities" from his array, then pick any 3 cities you like, 
+//and add them to Jim's array. If you did it in 3 lines of code that's fine, but see if you can do it in one line of code
+
+jimHaff.pop();
+jimHaff.push("Los Angeles", "Chicago", "Denver");
+console.log("Jim is all over the place " + jimHaff[2] + ", " + jimHaff[3] + ", " + jimHaff[4])
+
+// Bonus: Whoops! Jim Haff is actually only allowed to be in one of two cities. Whatever the first of the 3 cities for Jim Haff is now, 
+//remove it from the array using .splice()
+
+jimHaff.splice(2,1);
+console.log("Jim is only allowed to be in one of two cities " + jimHaff[2] + " or " + jimHaff[3])
