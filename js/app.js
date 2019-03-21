@@ -118,3 +118,58 @@ console.log(ninjaTurtles);
 // Bonus: Modify the answer you just wrote. Instead of all letters 
 // being uppercase, make the letters alternate back and forth between 
 // uppercase and lowercase.
+
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "GA hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+
+//   Kristyn's left shoe has traveled through time and space 
+// and turned up in Thom's accessories drawer! 
+// Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. 
+// Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+
+kristynsCloset.splice(0,1);
+var kristynsShoe = "left shoe";
+thomsCloset[2].push(kristynsShoe);
+console.log(thomsCloset[2]);
+
+// Modify your code to put together 3 separate outfits for Kristyn and Thom. 
+// Put the output in a sentence to tell us what we'll be wearing. Mix and match!
+
+for (let i = 1; i <= 3; i++) {
+        console.log("today Kristyn will be wearing " + kristynsCloset[Math.floor(Math.random() * 6)] 
+        + " , " + kristynsCloset[Math.floor(Math.random() * 6)]+ " and " + kristynsCloset[Math.floor(Math.random() * 6)] );
+    }
+
+for (let j = 1; j <= 3; j++) {
+        console.log("today Thom will be wearing " + thomsCloset[0][Math.floor(Math.random() * 4)] 
+        + " , " + thomsCloset[1][Math.floor(Math.random() * 3)]+ " and " + thomsCloset[2][Math.floor(Math.random() * 4)] );
+    }
